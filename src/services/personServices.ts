@@ -1,23 +1,23 @@
-import {  Person } from "../types/person";
+import { Person } from "../types/person";
 import { conflictError, notFoundError } from "../utils/errorUtils.js";
 import personRepository from "../repositories/personRepository.js";
 
 async function insertPerson(user: Person) {
-  validateCpf(user.cpf)
+  validateCpf(user.cpf);
 
-  const hasPerson = await personRepository.findByCpf(user.cpf)
-  if(hasPerson)throw conflictError("user already registered");
+  const hasPerson = await personRepository.findByCpf(user.cpf);
+  if (hasPerson) throw conflictError("user already registered");
 
-  await personRepository.insert(user)
+  await personRepository.insert(user);
 }
 
-async function getPersonByCpf (cpf : string){
+async function getPersonByCpf(cpf: string) {
   validateCpf(cpf);
 
-  const hasPerson = await personRepository.findByCpf(cpf)
-  if(!hasPerson) throw notFoundError("user not founded")
-  
-  return hasPerson
+  const hasPerson = await personRepository.findByCpf(cpf);
+  if (!hasPerson) throw notFoundError("user not founded");
+
+  return hasPerson;
 }
 
 function validateCpf(cpf: string) {
@@ -27,7 +27,5 @@ function validateCpf(cpf: string) {
 
 export default {
   insertPerson,
-  getPersonByCpf
+  getPersonByCpf,
 };
-
-

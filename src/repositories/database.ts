@@ -1,5 +1,4 @@
 import { Person } from "../types/person";
-import { Relationship } from "../types/relationship";
 
 const people: Record<string, Person> = {};
 

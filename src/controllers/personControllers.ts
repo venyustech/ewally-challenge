@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import personServices from "../services/personServices.js";
 import { Person } from "../types/person.js";
-import { json } from "body-parser";
 
 async function createPerson(req: Request, res: Response) {
   const user: Person = req.body;

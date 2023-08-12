@@ -6,6 +6,11 @@ async function insert({ cpf1, cpf2 }: Relationship) {
   database.relationships[cpf2].push(cpf1);
 }
 
+async function findRelatioshipByCpf(cpf: string) {
+  return database.relationships[cpf];
+}
+
 export default {
   insert,
+  findRelatioshipByCpf,
 };

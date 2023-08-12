@@ -1,4 +1,4 @@
-export interface  Person {
-  name: string
-  cpf: string
+export interface Person {
+  name: string;
+  cpf: string;
 }

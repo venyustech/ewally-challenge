@@ -1,9 +1,10 @@
 import { Person } from "../types/person";
 import { conflictError, notFoundError } from "../utils/errorUtils.js";
 import personRepository from "../repositories/personRepository.js";
+import validateCpf from "./shared/validateCpf.js";
 
 async function insertPerson(user: Person) {
-  validateCpf(user.cpf);
+  validateCpf.validateCpf(user.cpf);
 
   const hasPerson = await personRepository.findByCpf(user.cpf);
   if (hasPerson) throw conflictError("user already registered");
@@ -12,17 +13,12 @@ async function insertPerson(user: Person) {
 }
 
 async function getPersonByCpf(cpf: string) {
-  validateCpf(cpf);
+  validateCpf.validateCpf(cpf);
 
   const hasPerson = await personRepository.findByCpf(cpf);
   if (!hasPerson) throw notFoundError("user not founded");
 
   return hasPerson;
-}
-
-function validateCpf(cpf: string) {
-  const cpfFormat = /^[0-9]{11}$/;
-  if (!cpfFormat.test(cpf)) throw conflictError("only 11 numbers allowed to CPF");
 }
 
 export default {

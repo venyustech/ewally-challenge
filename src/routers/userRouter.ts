@@ -5,7 +5,11 @@ import { personSchema } from "../schemas/userSchema.js";
 
 const personRouter = Router();
 
-personRouter.post('/person', validateSchemaMiddleware(personSchema), personControllers.createPerson);
-personRouter.get('/person/:CPF',  personControllers.getPerson);
+personRouter.post(
+  "/person",
+  validateSchemaMiddleware(personSchema),
+  personControllers.createPerson
+);
+personRouter.get("/person/:CPF", personControllers.getPerson);
 
 export default personRouter;

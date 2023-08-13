@@ -1,6 +1,7 @@
 import { func } from "joi";
 import { Person } from "../../src/types/person";
 import { faker } from "@faker-js/faker";
+import { Relationship } from "../../src/types/relationship";
 
 function personValid() {
   const body: Person = {
@@ -25,8 +26,17 @@ function personWitout11DigitsCpf() {
   return body;
 }
 
+function relationshipBodyValid(cpf1: string, cpf2: string) {
+  const body: Relationship = {
+    cpf1,
+    cpf2,
+  };
+  return body;
+}
+
 export default {
   personValid,
   personWitout11DigitsCpf,
   personWithInvalidCpf,
+  relationshipBodyValid,
 };

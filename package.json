@@ -8,7 +8,7 @@
     "start": "node dist/src/server.js",
     "dev": "dotenv -e .env nodemon src/server.ts ",
     "test": "dotenv -e .env.test nodemon src/server.ts ",
-    "test:jest": "NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i"
+    "test:jest": "dotenv -e .env.test jest -i"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",

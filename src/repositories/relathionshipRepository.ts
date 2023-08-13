@@ -1,13 +1,13 @@
 import { Relationship } from "../types/relationship";
-import database from "./database.js";
+import chooseDb from "../database/chooseDb.js";
 
 async function insert({ cpf1, cpf2 }: Relationship) {
-  database.relationships[cpf1].push(cpf2);
-  database.relationships[cpf2].push(cpf1);
+  chooseDb.getDb().relationships[cpf1].push(cpf2);
+  chooseDb.getDb().relationships[cpf2].push(cpf1);
 }
 
 async function findRelatioshipByCpf(cpf: string) {
-  return database.relationships[cpf];
+  return chooseDb.getDb().relationships[cpf];
 }
 
 export default {

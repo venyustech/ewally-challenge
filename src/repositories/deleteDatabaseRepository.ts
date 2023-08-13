@@ -1,7 +1,7 @@
-import database from "./database.js";
+import chooseDb from "../database/chooseDb.js";
 
 async function removeAllDatabase() {
-  database.people = {};
+  chooseDb.getDb().people = {};
 }
 
 export default {

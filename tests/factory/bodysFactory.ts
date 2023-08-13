@@ -1,4 +1,3 @@
-import { func } from "joi";
 import { Person } from "../../src/types/person";
 import { faker } from "@faker-js/faker";
 import { Relationship } from "../../src/types/relationship";

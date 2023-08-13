@@ -11,10 +11,13 @@ As seguintes ferramentas e frameworks foram usados na construção do projeto:
 ![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
+## Link do deploy:
+[ewally-challenge.onrender.com](https://ewally-challenge.onrender.com)
+
 ## Testes no Postman:
 
 Caso queira ter acesso a todas as rotas de maneira mais prática, você pode acessar [clicando aqui](https://www.postman.com/warped-robot-193763/workspace/ewally-testes/collection/20979079-3e487873-4028-46f5-befc-d691f8cc3477)
-PS: lembre de adicionar o valor da variavel PORT no postman de acordo com a porta que o projeto está rodando
+PS: lembre de adicionar o valor da variavel  HOST está rodando o link de deploy. Caso queira, mude para localhost
 
 ## Modo do desenvolvedor:
 
@@ -62,7 +65,7 @@ $ npm run test
 
 ##### Clean - [DELETE] localhost:3000/clean
 
-##### Create Rela"onship - [POST] localhost:3000/relationship
+##### Create Relationship - [POST] localhost:3000/relationship
 
     entrada:
     {

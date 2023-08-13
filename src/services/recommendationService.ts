@@ -4,7 +4,7 @@ import validateCpf from "./shared/validateCpf.js";
 import relathionshipRepository from "../repositories/relathionshipRepository.js";
 
 async function getRecommendationByCpf(cpf: string) {
-  validateCpf.validateCpf(cpf);
+  await validateCpf.validateCpf(cpf);
 
   const hasPerson = await personRepository.findByCpf(cpf);
   if (!hasPerson) throw notFoundError("user not founded");

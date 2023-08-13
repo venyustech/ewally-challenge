@@ -11,6 +11,9 @@ As seguintes ferramentas e frameworks foram usados na construção do projeto:
 ![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
+## Testes no Postman: 
+acesse: https://www.postman.com/warped-robot-193763/workspace/ewally-testes/folder/20979079-4688a8b0-f196-497e-9be5-6fb1daad93c1
+
 ## Modo do desenvolvedor:
 
 Para executar isso no modo dev, você deve usar o ambiente Node.

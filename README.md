@@ -11,8 +11,10 @@ As seguintes ferramentas e frameworks foram usados na construção do projeto:
 ![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
-## Testes no Postman: 
-acesse: https://www.postman.com/warped-robot-193763/workspace/ewally-testes/folder/20979079-4688a8b0-f196-497e-9be5-6fb1daad93c1
+## Testes no Postman:
+
+Caso queira ter acesso a todas as rotas de maneira mais prática, você pode acessar [clicando aqui](https://www.postman.com/warped-robot-193763/workspace/ewally-testes/collection/20979079-3e487873-4028-46f5-befc-d691f8cc3477)
+PS: lembre de adicionar o valor da variavel PORT no postman de acordo com a porta que o projeto está rodando
 
 ## Modo do desenvolvedor:
 
@@ -45,3 +47,27 @@ $ npm run dev
 $ npm run test
 
 #### E aproveite :)
+
+###Rotas implementadas:
+
+##### Create Person - [POST] localhost:3000/person
+
+    entrada:
+    {
+      "cpf": "12345678909",
+      "name": "Joaozinho"
+    }
+
+##### Get Person - [GET] localhost:3000/person/:CPF
+
+##### Clean - [DELETE] localhost:3000/clean
+
+##### Create Rela"onship - [POST] localhost:3000/relationship
+
+    entrada:
+    {
+      "cpf1": "11111111111",
+      "cpf2": "22222222222"
+    }
+
+##### Get Recommenda"ons - [GET] localhost:3000/recommendations/:CPF
